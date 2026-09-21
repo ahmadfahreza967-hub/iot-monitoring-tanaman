@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar - IoT Monitoring Tanaman</title>
+    <!-- Google Font: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="login-wrapper">
+        
         <!-- Sisi Kiri: Banner & Ilustrasi -->
         <div class="left-banner">
             <div class="brand">
@@ -29,8 +31,8 @@
             </div>
 
             <div class="banner-content">
-                <h1>Mulai Pantau Tanaman <br><span class="green-text">secara Otomatis</span></h1>
-                <p>Buat akun sekarang untuk menghubungkan perangkat IoT dan memantau kondisi tanamanmu dari mana saja.</p>
+                <h1>Bergabung bersama <br><span class="green-text">IoT Monitoring</span></h1>
+                <p>Buat akun baru sekarang untuk mulai memantau perkembangan dan kesehatan tanaman Anda secara akurat.</p>
             </div>
 
             <div class="illustration-area">
@@ -48,18 +50,18 @@
                             <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
                         </svg>
                     </h2>
-                    <p>Lengkapi data di bawah untuk membuat akun baru</p>
+                    <p>Silakan isi data diri Anda untuk mendaftar</p>
                 </div>
 
-                <form action="login.html" method="POST" class="register-form">
+                <form action="index.html" method="GET" class="login-form">
                     <div class="input-group">
-                        <label for="fullname">Nama Lengkap</label>
+                        <label for="name">Nama Lengkap</label>
                         <div class="input-field">
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                                 <circle cx="12" cy="7" r="4"/>
                             </svg>
-                            <input type="text" id="fullname" placeholder="Masukkan nama lengkap Anda" required>
+                            <input type="text" id="name" placeholder="Masukkan nama lengkap" required>
                         </div>
                     </div>
 
@@ -82,32 +84,17 @@
                                 <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                             </svg>
                             <input type="password" id="password" placeholder="Buat password baru" required>
-                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
                         </div>
                     </div>
 
-                    <button type="submit" class="btn-primary">Daftar Sekarang</button>
+                    <button type="submit" class="btn-primary">Daftar</button>
                 </form>
 
-                <p class="register-text">Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+                <p class="register-text">Sudah punya akun? <a href="index.html">Masuk sekarang</a></p>
             </div>
         </div>
+
     </div>
 
-    <script>
-        // Toggle Show/Hide Password
-        const passwordInput = document.getElementById('password');
-        const eyeIcon = document.querySelector('.eye-icon');
-        if (eyeIcon && passwordInput) {
-            eyeIcon.addEventListener('click', () => {
-                const isPassword = passwordInput.getAttribute('type') === 'password';
-                passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
-                eyeIcon.style.color = isPassword ? '#22c55e' : '#94a3b8';
-            });
-        }
-    </script>
 </body>
 </html>
